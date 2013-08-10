@@ -1,0 +1,133 @@
+a {
+    color: #fb44a7;
+}
+.contentBox {
+	position: absolute;
+	top: 200px;
+	left: 400px;
+	background-color: pink;
+	height: 400px;
+	width: 700px;
+	padding: 15px 0px 15px 15px;
+	border-radius: 10px;
+/*	font-size: 20pt;*/
+	overflow-y: auto;
+}
+
+.header {
+	position: absolute;
+	display: inline-block;
+	top: 80px;
+	left: 400px;
+	width: auto;
+	text-align: center;
+	white-space: nowrap;
+	overflow: hidden;
+
+	
+}
+
+
+.fancybox-thumb {
+	width: 150px;
+	height: 100px;
+	margin: 1px;
+	margin-bottom: 5px;
+}
+
+.bwa-gallery {
+	width: 750px;
+	position: relative;
+	margin-left: 35px;
+}
+
+.navbar .nav {
+  position: relative;
+  left: 0;
+  display: block;
+  float: left;
+  margin: 0 10px 0 0;
+  font-family: 'Raleway', Helvetica, Arial, sans-serif;
+  font-size: 14pt;
+  white-space: nowrap;
+  overflow: hidden;
+  width: auto;
+
+}
+
+.navbar .nav > li > a:hover {
+    color: #FB44A7;
+}
+
+
+h1 {
+    font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    color: #FB44A7;
+	font-size: 67px;
+}
+
+h2 {
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+    color: #FB44A7;
+    font-size: 35px;
+    text-align: center;
+}
+
+h3 {
+	color: #FB44A7;
+	font-family: 'Raleway', Helvetica, Arial, sans-serif;
+	text-align: center;
+}
+ 
+p, ol, ul, center {
+    font-family: 'Goudy Bookletter 1911', Georgia, Times, serif;
+/*    font-size: 17px;*/
+/*    line-height: 25px;*/
+    padding: 0px 20px;
+    content: -10px;
+    position: relative;
+}
+
+
+#footer {
+	position: absolute;
+	bottom: 0px;
+    /*display: inline-block;*/
+    width: 100%;
+    padding-top: 20px;
+    z-index: 2;
+    height: 40px;
+    background-color: #f5f5f5;
+    text-align: center;
+    margin-top: 100px;
+	
+}
+
+hr {
+	margin-top: -35px;
+	margin-left: 30px;
+}
+
+#form {
+	padding: 0px;
+	
+}
+
+.form-actions, btn {
+	background-color: pink;
+    
+}
+
+.const{
+    color: #FB44A7;
+}
+
+
+.modal {
+	color: #333;
+}
+
+#logo {
+    -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,1)), to(rgba(255,255,255,0)));
+	background-image: linear-gradient(to top right, rgba(255,255,255,1), rgba(255,255,255,0));
+}
