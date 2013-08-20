@@ -2,8 +2,7 @@ var data = {
     name: "Black Women's Alliance",
     tagLine: "Love, Protect, Respect Your Sista EST. 1997",
     links: ["Home","Resources","E-Board","Members","Events","Ladies of Soul","Contact"],
-    headers: ["Why We're Here","Resources","BWA Executive Board 2013-2014","Ladies of BWA","Upcoming Events","Ladies of Soul","Contact"],
-    footer: "Developed by © 2013 mchlljy",
+    footer: "2013 Developed by ",
     url : function () {  
         return function (text, render) {  
             text = render(text);  
@@ -22,10 +21,37 @@ var data = {
                 return '<a href="' + url + '">' + text + '</a>';
             }
         }  
-    } 
+    },
+    developer: ["mchlljy"],
+    mchlljy : function() {
+        return function(text, render) {
+            text = render(text);
+            newtxt = text.trim().toLowerCase().split()[0];
+            var url = "<a href='http://www.web.mit.edu/" + newtxt + "/www'>"+ newtxt + "</a>";
+            return url;
+        }
+    }
 };
 
-var template = "<div class='navbar navbar-inverse navbar-fixed-top' style='position: absolute;'><div class='navbar-inner'><ul class='nav'>{{#links}}<li>{{#url}} {{.}} {{/url}}</li>{{/links}}</ul></div></div><div class='header'><h1>Black Women's Alliance</h1><p style='text-align: center;'>Love, Protect, Respect Your Sista EST. 1997<br>Developed by &copy; 2013 <a href='http://web.mit.edu/mchlljy/www'>mchlljy</a></p><br><br></div><div class='span7' style='position: absolute'><img src='pinklogo_transparent.png' id='logo' style='margin-top: -30px; margin-left: -30px'/></div>";
+var template = "<div class='navbar navbar-inverse navbar-fixed-top' style='position: absolute;'>"
++"<div class='navbar-inner'>"
++   "<ul class='nav'>"
++       "{{#links}}"
++       "<li>{{#url}} {{.}} {{/url}}</li>"
++"      {{/links}}"
++   "</ul>"
++"</div>"
++"</div>"
++"<div class='header'>"
++   "<h1>{{name}}</h1>"
++   "<p style='text-align: center;'>"
++       "{{tagLine}}<br>"
++       "{{footer}} {{#developer}}{{#mchlljy}} {{.}} {{/mchlljy}}{{/developer}}"
++   "</p><br><br>"
++"</div>"
++"<div class='span7' style='position: absolute'>"
++"<img src='pinklogo_transparent.png' id='logo' style='margin-top: -30px; margin-left: -30px'/>"
++"</div>";
 
 var html = Mustache.render(template, data);
 
